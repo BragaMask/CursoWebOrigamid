@@ -1,6 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
+    font-family: Arial, Helvetica, sans-serif; /*Tipografia*/
 }
 
 h1{
@@ -27,7 +26,11 @@ h2{
 }
 
 .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: grid; /* define o container como um grid */
+    height: 800px;
+    grid-template-columns: auto auto; /* tamanho / quantidade de colunas */
+    gap: 20px; /* espaçamento entre os itens */
+    justify-content: space-evenly; /* alinha os itens na horizontal */
+    align-content: space-evenly ; /* alinha os itens na vertical */
+    /*place-content: space-evenly center;  // alinha os itens na horizontal e vertical - é basicamente um coringa */
 }
