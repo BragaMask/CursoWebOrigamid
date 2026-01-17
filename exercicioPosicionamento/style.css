@@ -1,0 +1,66 @@
+body{
+    font-family: Arial;
+    background-color: #f7f7f7;
+}
+
+#imagemBicicleta{
+    width: 500px;
+    height: auto;
+}
+
+p{    
+    font-size: 20px;
+}
+
+button{
+    font-size: 16px;
+    background-color: #ee2211;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.titulo{
+    display: grid;
+    justify-items: center;
+}
+
+.opcoes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.opcoesP{
+    background-color: white;
+    padding: 20px;
+}
+
+.descricao{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    max-width: 1000px;
+    max-height: 1000px ;
+    margin: auto;
+}
+
+.descricaoTitulo{
+    display: flex;
+    gap: 10px;
+}
+
+.descricao1{
+    background-color: #ffffff;
+    display: grid;
+    justify-items: end;
+}
+
+.descricao3{
+    color: #c6c6c6;
+    font-size: 32px;
+}
+
+.descricao4{
+    background-color: #ffffff;
+}

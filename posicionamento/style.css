@@ -2,11 +2,17 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr; 
+    justify-items: end;
+    }
+
+.titulo{
+    grid-column: 2; 
+    text-align: right;
 }
 
-.foto{
-    grid-column: 1/3; /*ou 1/-1*/
-}
+/*.foto{
+    grid-column: 1/3; /*ou 1/-1
+}*/
 
 .descricao{
     grid-column: 1/3;
