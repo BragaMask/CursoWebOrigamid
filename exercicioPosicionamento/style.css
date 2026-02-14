@@ -9,6 +9,12 @@ body{
     gap: 60px;
     justify-items: center;
 }
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
 p,h1,h2,h3{
     margin: 0px;    
     padding: 0px;
@@ -23,10 +29,18 @@ a{
 }
 
 p{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
+
 /*Estilos Especificos*/
+
+header{
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+}
+
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -35,10 +49,16 @@ p{
 }
 
 .menu a{
+    display: block;
     background: #ffffff;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     color: #000000;
+    border: 2px solid #ffffff;
+}
+
+.menu a:hover{
+    border: 2px solid red;
 }
 
 .conteudo{
@@ -70,12 +90,18 @@ p{
 .botao{
     background: #e21;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.botao:hover{
+    background: #6f0000;
+
 }
 
 #subtitulo{
-    font-size: 64px;
+    font-size: 4rem;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.2);
     text-align: right;
@@ -95,7 +121,15 @@ p{
     padding: 20px;
 }
 
-.vantagens-item, p{
+.vantagens-item:hover{
+    border-left: 4px solid #6f0000;
+}
+
+.vantagens-item:nth-child(odd){
+    background: #f7f7f7;
+}
+
+.vantagens-item p{
     grid-column: 2;
 }
 
