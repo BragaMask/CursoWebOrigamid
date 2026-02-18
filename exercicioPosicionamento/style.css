@@ -67,6 +67,11 @@ header{
     grid-template-columns: 1fr 1fr;
 }
 
+.introducao-cover img{
+    height: 100%;
+    object-fit: cover;
+}
+
 .introducao{
     background: #ffffff;
     padding: 40px;
@@ -107,6 +112,7 @@ header{
     text-align: right;
     padding: 40px;
     align-self: center;
+    /*word-break: break-all;*/
 }
 
 .vantagens{
@@ -139,4 +145,22 @@ header{
     text-align: center;
     padding: 30px;
     box-sizing: border-box;
+}
+
+@media (max-width:1000px){
+    .conteudo-vantagem{
+        grid-template-columns: 1fr;
+    }
+    #subtitulo{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px){
+    .conteudo{
+        grid-template-columns: 1fr;
+    }
+    .introducao::before {
+        display: none;   
+    }
 }
