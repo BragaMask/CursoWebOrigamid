@@ -1,18 +1,28 @@
-// Adicione a classe ativo a todos os itens do menu
-const itensMenu = document.querySelectorAll('.menu a');
+const listaAnimais = document.querySelector('.animais-lista');
 
-itensMenu.forEach((item) => {
-    item.classList.add('ativo');
-});
-// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
-itensMenu.forEach((item) => {
-    item.classList.remove('ativo');
-});
-itensMenu[0].classList.add('ativo');
-// Verifique se as imagens possuem o atributo alt
-const imgs = document.querySelectorAll('img');
+const heightTotal = listaAnimais.scrollHeight;
+console.log(heightTotal);
 
-imgs.forEach((img) => {
-    const possuiAtributo = img.hasAttribute('alt');
-    console.log(possuiAtributo);
-})
+//listaAnimais.clientHeight; - height + padding
+//listaAnimais.offsetHeight; - height + padding + border
+//listaAnimais.scrollHeight; - height total, mesmo dentro de scroll
+
+const distanciaTopo = listaAnimais.offsetTop;
+console.log(distanciaTopo);
+
+const rect = listaAnimais.getBoundingClientRect();
+console.log(rect.width);
+//rect.height - tamanho do Height do elemento
+//rect.width - tamanho do width do elemento
+
+console.log(window.innerWidth);
+
+const small = window.matchMedia('(max-width: 600px)').matches;
+
+if (small) {
+    console.log('usuario mobile')
+} else {
+    console.log('usuario desktop')
+}
+
+console.log(small)
