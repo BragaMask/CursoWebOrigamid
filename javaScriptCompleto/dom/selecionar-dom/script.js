@@ -1,24 +1,30 @@
-const img = document.querySelector('img');
+// Quando o usuário clicar nos links internos do site,
+// adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna
+// o comportamento padrão desses links
+const linkExternos = document.querySelectorAll('a[href^="#"]')
 
-function clicou(event) {
-    console.log(event);
-}
-//img.addEventListener('click', clicou)
-
-const imagensLista = document.querySelector('.animais-lista');
-
-function callBackLista(event) {
-    console.log(event.currentTarget);
-    console.log(event.target);
-}
-
-imagensLista.addEventListener('click', callBackLista)
-
-const linkExterno = document.querySelector('a[href^="http"]')
-
-function handleLinkExterno(event){
+function handleLink(event) {
     event.preventDefault();
-    console.log('Clicou');
+    linkExternos.forEach((link) => {
+        link.classList.remove('ativo');
+    })
+    this.classList.add('ativo');
 }
 
-linkExterno.addEventListener('click', handleLinkExterno)
+linkExternos.forEach((link) => {
+    link.addEventListener('click', handleLink);
+})
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados
+const todosElementos = document.querySelectorAll('body *');
+
+function handleElemento(event) {
+    console.log(event.currentTarget);
+}
+
+todosElementos.forEach((elemento) =>{
+    elemento.addEventListener('click', handleElemento);
+})
+
+
