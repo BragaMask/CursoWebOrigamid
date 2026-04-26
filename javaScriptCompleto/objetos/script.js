@@ -1,41 +1,22 @@
-// Crie um objeto com os seus dados pessoais
-// Deve possui pelo menos duas propriedades nome e sobrenome
-var dadosPessoais = {
-  nome: "Arthur",
-  sobrenome: "Rodrigues Braga",
-  idade: 17,
-  nomeCompleto: function(nome, sobrenome) {
-    return nome + "" + sobrenome;
-  }
+//prototype -> objeto adicionado a uma função quando a mesma é criada.
+
+function Pessoa(nome, sobrenome) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
 }
 
-
-// Crie um método no objeto anterior, que mostre o seu nome completo
-
-
-// Modifique o valor da propriedade preco para 3000
-var carro = {
-  preco: 1000,
-  portas: 4,
-  marca: 'Audi',
+Pessoa.prototype.morreu = function(){
+  console.log('acho que ele morreu');
 }
 
-carro.preco = 3000;
+const p1 = new Pessoa('Luiz', 'Otávio');
 
-// Crie um objeto de um cachorro que represente um labrador,
-// preto com 10 anos, que late ao ver um homem
+console.log(Pessoa.prototype); //retorna o objeto 
+console.log(p1.prototype); //undefined
 
-var cachorro = {
-  raca: "labrador",
-  cor: "preto",
-  idade: 10,
-  verHomem: true,
-  latir: function(verHomem) {
-    if (verHomem == true) {
-      return "au au"
-    }
-    else{
-      return "*silencio*"
-    }
-  }
-}
+console.log(p1.morreu());
+
+//construtores nativos - Objetos, Funções, Números, Strings, etc... possuem o prototype, ou seja, possuem métodos e propriedades.
+
+const pais = 'Brasil'; 
+const cidade = new String('Rio'); //String é um construtor nativo, ou seja, tem o prototype.
